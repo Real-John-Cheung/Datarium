@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Datarium</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <main>
+        <div id="langSwitch"> <span id="switchToEn" class="neue">En</span> / <span id="switchToCh" class="genyo">中</span></div>
+        <div id="header">
+            <div id="headerShadow">
+                <div id="title" class="din en">Datarium</div>
+                <div id="title" class="ch genyo">Datarium</div>
+                <div id="generalDes">
+                    <div class="en neue">
+                        <p>Datarium is a series of generative animation/video installations. In this series, I imagine a digital world inhabited by digital creatures. Many portals, some of them appear to be screens and some of them look like everyday objects, bridge the gap between our reality and the digital domain. Each portal offers a unique glimpse into specific areas of the digital world, revealing diverse ecosystems teeming with digital life forms.</p>
+                        <p>Datarium is the result of a series of extensive studies on diverse natural ecosystems, especially aquatic ones. It is a re-interpretation and re-imagination of the world we occupy, an exploration of alternative forms of organisms, and a question of the essence of life.</p>
+                        
+                    </div>
+                    <div class="ch genyo">
+                        <p>Datarium 是一系列的生成動畫/影響裝置。 在這個系列作品中，我想像了一個充滿了奇異數字生物的數字世界。 在我們所處的現實與那個數字世界之間存在著許多傳送門。它們有的是某種電子屏幕，有的看起來像日常用品。 每個傳送門都通往數字世界中的不同區域，向我們展現數字生命形式多樣的生態系統的驚鴻一瞥。</p>
+                        <p>Datarium 是對不同自然生態系統，尤其是水生生態系統進行一系列廣泛研究的成果。 它是對我們所處世界的重新詮釋和想像，是對另一種生物體形式的探索，也是對生命本質的追問。</p>
+                        
+                    </div>
+                </div>
+                <div id="arr">
+                    <div class="en neue"><p>↓ Explore Datarium ↓</a></p></div>
+                    <div class="ch genyo"><p>↓探索Datarium↓</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="horCenteredContainer">
+                <!-- <div class="catagoryTitle">
+                    <div class="en neue"><p>Worlds</p></div>
+                    <div class="ch genyo"><p>數字世界</p></div>
+                </div>
+                <div class="indexLinkContainer">
+                    <div class="indexLink">
+                        <a href="./w05A35.html">
+                            <div class="linkImage">
+                                <img loading="lazy" src=".">
+                            </div>
+                            <div class="linkText en neue">Digital World #05A35</div>
+                            <div class="linkText ch genyo">數字世界#05A35</div>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="catagoryTitle">
+                    <div class="en neue"><p>Portals</p></div>
+                    <div class="ch genyo"><p>傳送門</p></div>
+                </div>
+                <div class="indexLinkContainer">
+                    <div class="indexLink">
+                        <a href="./04A63.html">
+                            <div class="linkImage">
+                                <img loading="lazy" src=".">
+                            </div>
+                            <div class="linkText en neue">Datarium04A63</div>
+                            <div class="linkText ch genyo">Datarium04A63</div>
+                        </a>
+                    </div>
+                    <div class="indexLink">
+                        <a href="./055BB.html">
+                            <div class="linkImage">
+                                <img loading="lazy" src=".">
+                            </div>
+                            <div class="linkText en neue">Datarium055BB</div>
+                            <div class="linkText ch genyo">Datarium055BB</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="catagoryTitle">
+                    <div class="en neue"><p>Digital Creatures</p></div>
+                    <div class="ch genyo"><p>數字生物</p></div>
+                </div>
+                <div class="indexLinkContainer">
+                    <div class="indexLink">
+                        <a href="./platystomata.html">
+                            <div class="linkImage">
+                                <img loading="lazy" src=".">
+                            </div>
+                            <div class="linkText en neue">Platystomata</div>
+                            <div class="linkText ch genyo">Platystomata</div>
+                        </a>
+                    </div>
+                    <div class="indexLink">
+                        <a href="./ommatoporifera.html">
+                            <div class="linkImage">
+                                <img loading="lazy" src=".">
+                            </div>
+                            <div class="linkText en neue">Ommatoporifera</div>
+                            <div class="linkText ch genyo">Ommatoporifera</div>
+                        </a>
+                    </div>
+                    <div class="indexLink">
+                        <a href="./plasmodata.html">
+                            <div class="linkImage">
+                                <img loading="lazy" src=".">
+                            </div>
+                            <div class="linkText en neue">Plasmodata</div>
+                            <div class="linkText ch genyo">Plasmodata</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footNote">
+            <div class="en neue"><p><span>© 2023 </span><a href="https://johncheung.art">JohnC</a><span> | </span><a href="javascript:void(0)">RCA 2023</a></p></div>
+            <div class="ch genyo"><p><span>© 2023 </span><a href="https://johncheung.art">JohnC</a><span> | </span><a href="javascript:void(0)">RCA 2023</a></p></div>
+        </div>
+    </main>
+    <script>
+        (function() {
+            switchToEn();
+            document.getElementById("arr").addEventListener("click", () => {
+                document.getElementById("content").scrollIntoView({behavior:"smooth"})
+            })
+        })();
+    </script>
+</body>

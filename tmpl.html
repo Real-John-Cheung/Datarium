@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title>tmpl</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="header2" id="tmplHeader">
+            <div id="title" class="en din">tmpl</div>
+            <div id="title" class="ch genyo">模板</div>
+            <div id="langSwitch"> <span id="switchToEn" class="neue">En</span> / <span id="switchToCh" class="genyo">中</span></div>
+        </div>
+        <div id="content2">
+            <div class="horCenteredContainer">
+                <div class="blogFlexColContainer">
+                    <p></p>
+                    <div class="pt">
+                        
+                    </div>
+                    <div class="pg">
+                        <div class="pgContainer">
+                            <div class="pImageContainer">
+                                <div>
+                                    <img loading="lazy" class="pImage" src="">
+                                </div>
+                                <div class="pgObjectText"></div>
+                            </div>
+                        </div>
+                        <div class="pgText">
+                            
+                        </div>
+                    </div>
+                    <div class="vid">
+                        <div class="vidContainer">
+                            
+                        </div>
+                        <div class="vidText">
+                        </div>
+                    </div>
+                </div>
+                <div class="backToIndex">
+                    <p class="en neue"><a href="./index.html">Return to index</a></p>
+                    <p class="ch genyo"><a href="./index.html">回到主頁</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footNote">
+            <div class="en neue"><p><span>© 2023 </span><a href="https://johncheung.art">JohnC</a><span> | </span><a href="javascript:void(0)">RCA 2023</a></p></div>
+            <div class="ch genyo"><p><span>© 2023 </span><a href="https://johncheung.art">JohnC</a><span> | </span><a href="javascript:void(0)">RCA 2023</a></p></div>
+        </div>
+    </main>
+    <div id="showImageContainer" class="hidden">
+        <div class="imageToShow">
+            <img loading="eager" src="" id="larImg">
+        </div>
+    </div>
+    <script>
+        (function() {
+            bindEvents();
+            switchToEn();
+        })();
+    </script>
+</body>
