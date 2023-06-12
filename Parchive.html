@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>Archive of Platystomata</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./archive.js"></script>
+</head>
+<body>
+    <main>
+        <div class="header2" id="tmplHeader">
+            <div id="title" class="en din">Archive of Platystomata</div>
+            <div id="title" class="ch genyo">Platystomata的檔案</div>
+            <div id="langSwitch"> <span id="switchToEn" class="neue">En</span> / <span id="switchToCh" class="genyo">中</span></div>
+        </div>
+        <div id="content2">
+            <div class="horCenteredContainer">
+                <div class="blogFlexColContainer">
+                    <p></p>
+                    <div class="pt">
+                        <p class="en neue">If you would like to obtain a high-quality physical print of one of the archived image or would like to view more of the unlisted ones. Please get in touch with researcher John C via email <a href="mailto:me@johncheung.art">me@johncheung.art</a></p>
+                        <p class="ch genyo">如果你想購買檔案圖片的高品質印刷版，或者想查看更多未列出的檔案圖片。 請通過電子郵件聯絡研究員John C： <a href="mailto:me@johncheung.art">me@johncheung.art</a></p>
+                    </div>
+
+                    <div class="pg">
+                        <div class="pgContainer" id="archiveContainer">
+                            <!-- <div class="pImageContainer">
+                                <div>
+                                    <img loading="lazy" class="pImage" src="">
+                                </div>
+                                <div class="pgObjectText"></div>
+                            </div> -->
+                        </div>
+                        <div class="pgText" id="loading">
+                            <p class="en neue">loading ...</p>
+                            <p class="ch genyo">載入中 ...</p>
+                        </div>
+                        <div class="pgText hidden" id="loadMore" onClick="loadMore()">
+                            <p class="en neue">Click to load more</p>
+                            <p class="ch genyo">點擊以載入更多</p>
+                        </div>
+                        <div class="pgText hidden" id="error">
+                            <p class="en neue">Error when loading data, please check your Internet connection.</p>
+                            <p class="ch genyo">載入數據錯誤，請檢查你的互聯網連接。</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="backToIndex">
+                    <p class="en neue"><a href="./index.html">Return to index</a></p>
+                    <p class="ch genyo"><a href="./index.html">回到主頁</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footNote">
+            <div class="en neue"><p><span>© 2023 </span><a href="https://johncheung.art">JohnC</a><span> | </span><a href="javascript:void(0)">RCA 2023</a></p></div>
+            <div class="ch genyo"><p><span>© 2023 </span><a href="https://johncheung.art">JohnC</a><span> | </span><a href="javascript:void(0)">RCA 2023</a></p></div>
+        </div>
+    </main>
+    <div id="showImageContainer" class="hidden">
+        <div class="archiveImage">
+            <img loading="eager" src="" id="larImg">
+        </div>
+        <div id="archiveText">
+        </div>
+    </div>
+    <script>
+        (function() {
+            switchToEn();
+            display("Platy");
+        })();
+    </script>
+</body>
