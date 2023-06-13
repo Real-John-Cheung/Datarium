@@ -98,7 +98,7 @@ a:hover {
 
 #header{
     /* background-image: url("./images/1.jpg"); */
-    background: url("./images/1.jpg") center fixed;
+    background: url("./images/DatariumCover.jpg") center fixed;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -417,6 +417,10 @@ a:hover {
     #title{
         font-size: 2rem;
         margin-top: 0.56rem;
+    }
+
+    #generalDes{
+        font-size: 18px;
     }
 
     .indexLinkContainer{
