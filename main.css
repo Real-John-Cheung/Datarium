@@ -406,6 +406,12 @@ a:hover {
     #headerShadow{
         background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5) 60%, rgba(0,0,0,0) 100%);
     }
+
+    #header{
+        /* background-image: url("./images/1.jpg"); */
+        background-attachment: scroll;
+        
+    }
 }
 
 @media all and (max-width: 1000px) and (orientation:landscape) {
@@ -448,5 +454,11 @@ a:hover {
 
     #headerShadow{
         background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.5) 60%, rgba(0,0,0,0) 100%);
+    }
+
+    #header{
+        /* background-image: url("./images/1.jpg"); */
+        background-attachment: scroll;
+        
     }
 }
