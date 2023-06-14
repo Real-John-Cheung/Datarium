@@ -148,6 +148,7 @@ a:hover {
     width: 50%;
     margin: auto;
     min-width: 14rem;
+    overflow-y: auto;
     /* border-radius: 5px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5); */
