@@ -98,10 +98,10 @@ a:hover {
 
 #header{
     /* background-image: url("./images/1.jpg"); */
-    background: url("./images/DatariumCover.jpg") center fixed;
-    background-position: bottom;
+    background-image: url("./images/DatariumCover.jpg");
+    background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     max-height: 100vh;
     
