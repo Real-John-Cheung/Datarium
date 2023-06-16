@@ -349,12 +349,18 @@ a:hover {
 #archiveText{
     text-align: center;
     font-size: 1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
+    margin: auto;
+}
+
+#archiveImageLar{
+    max-width: 90vmin;
+    max-width: 90vmin;
 }
 
 #larImg{
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 90vmin;
+    max-height: 90vmin;
 }
 
 #loadMore{
