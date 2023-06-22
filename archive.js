@@ -70,6 +70,8 @@ createDoms = (begin, end, className) => {
         let sellOptionsEN = "";
         let sellOptionsCH = ""
         obj.options.forEach((o, i) => {
+            sellOptionsEN += `<a target="blank" href="https://johncheung.art/product/${nn}">`;
+            sellOptionsCH += `<a target="blank" href="https://johncheung.art/product/${nn}">`;
             sellOptionsEN += o.option;
             sellOptionsCH += o.optionCH;
             sellOptionsEN += " £";
@@ -77,20 +79,31 @@ createDoms = (begin, end, className) => {
             sellOptionsEN += o.priceInGBP;
             sellOptionsCH += o.priceInGBP;
             if (i < obj.options.length - 1) {
-                sellOptionsEN += "<br>";
-                sellOptionsCH += "<br>";
+                sellOptionsEN += "</a><br>";
+                sellOptionsCH += "</a><br>";
+            } else {
+                sellOptionsCH += "</a>";
+                sellOptionsEN += "</a>";
             }
         });
         dt.innerHTML = `<p class="en neue"><b>${nn}</b><br>
-        ${obj.ava} / ${obj.editions}<br>
         Giclée prints on Hahnemühle Photo Rag<br>
         ${sellOptionsEN}
         </p>
         <p class="ch genyo"><b>${nn}</b><br>
-        ${obj.ava} / ${obj.editions}<br>
         Hahnemühle Photo Rag 上的微噴印刷<br>
         ${sellOptionsCH}
         </p>`
+        // dt.innerHTML = `<p class="en neue"><b>${nn}</b><br>
+        // ${obj.ava} / ${obj.editions}<br>
+        // Giclée prints on Hahnemühle Photo Rag<br>
+        // ${sellOptionsEN}
+        // </p>
+        // <p class="ch genyo"><b>${nn}</b><br>
+        // ${obj.ava} / ${obj.editions}<br>
+        // Hahnemühle Photo Rag 上的微噴印刷<br>
+        // ${sellOptionsCH}
+        // </p>`
         d.appendChild(img);
         pic.appendChild(d);
         pic.appendChild(dt);
@@ -184,15 +197,17 @@ bindEvents2 = () => {
             let info = jsonData[idx];
             //
             let nameStr = info.name.substring(0, info.name.length - 4);
+            let stringEn = "Buy it now.";
+            let stringCh = "現在購買";
             let isEn = document.getElementById("switchToEn").classList.contains("currentLang")
             //
             if (isEn) {
                 //currentLang = "en";
-                at.innerHTML = `<p class="en neue"><b>${nameStr}</b><br>
+                at.innerHTML = `<p class="en neue"><b><a href="https://johncheung.art/product/${nameStr}" target="_blank">${stringEn}</a></b><br>
                 </p>`
             } else {
                 //currentLang = "ch";
-                at.innerHTML = `<p class="ch genyo"><b>${nameStr}</b><br>
+                at.innerHTML = `<p class="ch genyo"><b><a href="https://johncheung.art/product/${nameStr}" target="_blank">${stringCh}</a></b><br>
                 </p>`
             }
         })
