@@ -31,19 +31,19 @@
 @font-face {
     font-family: "genyo";
     font-weight: normal;
-    src: url("./font/GenYoGR.ttf");
+    src: url("./font/optFonts/GenYoGR.ttf");
 }
 
 @font-face {
     font-family: "genyo";
     font-weight: bold;
-    src: url("./font/GenYoGB.ttf");
+    src: url("./font/optFonts/GenYoGB.ttf");
 }
 
 @font-face {
     font-family: "genyo";
     font-weight: light;
-    src: url("./font/GenYoGL.ttf");
+    src: url("./font/optFonts/GenYoGL.ttf");
 }
 
 html, body{
