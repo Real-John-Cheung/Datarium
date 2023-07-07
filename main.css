@@ -373,6 +373,19 @@ a:hover {
     color: black;
 }
 
+.loadMore{
+    transition: all 0.2s;
+    font-size: 0.78rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.loadMore:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
 @media all and (max-width: 1000px) and (orientation:portrait) {
 
     html,body{

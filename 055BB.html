@@ -16,47 +16,12 @@
                 <div class="blogFlexColContainer">
                     <p></p>
                     <div class="pg">
-                        <!-- <div class="pgContainer">
-                            <div class="pImageContainer">
-                                <div>
-                                    <img loading="lazy" class="pImage" src="。">
-                                </div>
-                                <div class="pgObjectText"></div>
-                            </div>
-                            <div class="pImageContainer">
-                                <div>
-                                    <img loading="lazy" class="pImage" src="。">
-                                </div>
-                                <div class="pgObjectText"></div>
-                            </div>
-                            <div class="pImageContainer">
-                                <div>
-                                    <img loading="lazy" class="pImage" src="。">
-                                </div>
-                                <div class="pgObjectText"></div>
-                            </div>
-                            <div class="pImageContainer">
-                                <div>
-                                    <img loading="lazy" class="pImage" src="。">
-                                </div>
-                                <div class="pgObjectText"></div>
-                            </div>
-                            <div class="pImageContainer">
-                                <div>
-                                    <img loading="lazy" class="pImage" src="。">
-                                </div>
-                                <div class="pgObjectText"></div>
-                            </div>
-                            <div class="pImageContainer">
-                                <div>
-                                    <img loading="lazy" class="pImage" src="。">
-                                </div>
-                                <div class="pgObjectText"></div>
-                            </div>
-                        </div> -->
+                        <div class="pgContainer" id="photosContainer">
+                            
+                        </div>
                         <div class="pgText">
-                            <p class="en neue">Photos of Datarium055BB coming soon</p>
-                            <p class="ch genyo">Datarium055BB的照片即將上線</p>
+                            <p class="en neue">Photos of Datarium055BB at RCA2023</p>
+                            <p class="ch genyo">Datarium055BB的照片，攝於RCA2023展覽</p>
                         </div>
                     </div>
                     
@@ -143,7 +108,76 @@
         </div>
     </div>
     <script>
+        let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+        const shuffle = (a) => {
+            let i = a.length, j = 0, temp;
+            while(i--) {
+                j = Math.floor(Math.random() * (i+1));
+                temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+            return a;
+        }
+        let randArray, target, bookmark, tank;
+        const loadM = () => {
+            const loadMoreNode = document.getElementsByClassName("loadMore")[0];
+            for (let i = bookmark - 1; i < Math.min(randArray.length, bookmark + 5); i++) {
+                let pic = document.createElement("div");
+                pic.classList.add("pImageContainer");
+                let d = document.createElement("div");
+                let img = document.createElement("img");
+                img.loading = "lazy";
+                img.classList.add("pImage");
+                img.src = "./images/Th/" + tank + "" + randArray[i] + ".jpg";
+                let dt = document.createElement("div");
+                dt.classList.add("pgObjectText");
+                d.appendChild(img);
+                pic.appendChild(d);
+                pic.appendChild(dt);
+                img.addEventListener("click", ev => {
+                    let str = img.src;
+                    str = str.replace("Th", "Hd");
+                    let i = document.getElementById("larImg");
+                    i.src = str;
+                    let e = document.getElementById("showImageContainer");
+                    e.classList.remove("hidden");
+                });
+                target.insertBefore(pic,loadMoreNode);
+            }
+            bookmark += 6;
+            if (bookmark >= randArray.length) {
+                loadMoreNode.classList.add("hidden");
+            }
+        }
+        const initPhotoAlbum = (t) =>{
+            tank = t;
+            randArray = shuffle(array);
+            bookmark = 6;
+            target = document.getElementById("photosContainer");
+            for (let i = 0; i < bookmark; i++) {
+                let pic = document.createElement("div");
+                pic.classList.add("pImageContainer");
+                let d = document.createElement("div");
+                let img = document.createElement("img");
+                img.loading = "lazy";
+                img.classList.add("pImage");
+                img.src = "./images/Th/" + tank + "" + randArray[i] + ".jpg";
+                let dt = document.createElement("div");
+                dt.classList.add("pgObjectText");
+                d.appendChild(img);
+                pic.appendChild(d);
+                pic.appendChild(dt);
+                target.appendChild(pic);
+            }
+            let loadmore = document.createElement("div");
+            loadmore.classList.add("loadMore");
+            loadmore.innerHTML = `<p class="en neue">Click to load more photos</p><p class="ch genyo">點擊以載入更多照片</p>`;
+            loadmore.onclick = loadM;
+            target.appendChild(loadmore);
+        };
         (function() {
+            initPhotoAlbum("Small");
             bindEvents();
             switchToEn();
         })();
