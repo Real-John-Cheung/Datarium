@@ -359,8 +359,8 @@ a:hover {
 }
 
 #larImg{
-    max-width: 90vmin;
-    max-height: 90vmin;
+    max-width: 90vw;
+    max-height: 90vh;
 }
 
 #loadMore{
