@@ -31,19 +31,19 @@
 @font-face {
     font-family: "genyo";
     font-weight: normal;
-    src: url("./font/optFonts/.font-spider/GenYoGR.ttf");
+    src: url("./font/optFonts/GenYoGR.ttf");
 }
 
 @font-face {
     font-family: "genyo";
     font-weight: bold;
-    src: url("./font/optFonts/.font-spider/GenYoGB.ttf");
+    src: url("./font/optFonts/GenYoGB.ttf");
 }
 
 @font-face {
     font-family: "genyo";
     font-weight: light;
-    src: url("./font/optFonts/.font-spider/GenYoGL.ttf");
+    src: url("./font/optFonts/GenYoGL.ttf");
 }
 
 html, body{
@@ -250,12 +250,15 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    
+    justify-content:space-between;
     gap: 5.55rem;
 }
 
 .indexLink{
     display: flexbox;
     width: 200px;
+    /* margin: 0 5%; */
 }
 
 .linkImage img{
@@ -274,7 +277,8 @@ a:hover {
 
 .pImage{
     transition: scale 0.2s;
-    width: 300px;
+    height: 300px;
+    max-width: 500px;
 }
 
 .pImage:hover{
@@ -283,7 +287,7 @@ a:hover {
 }
 
 .pImageContainer{
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .pImageContainer div{
@@ -308,6 +312,7 @@ a:hover {
 .pgObjectText{
     text-align: center;
     font-size: 0.78rem;
+    max-width: 300px;
 }
 
 .vidContainer iframe{
