@@ -247,16 +247,17 @@ a:hover {
 }
 
 .indexLinkContainer{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid: auto-flow dense / 1fr 1fr 1fr;
+    /* flex-direction: row;
     flex-wrap: wrap;
     
-    justify-content:space-between;
+    justify-content:space-between; */
     gap: 5.55rem;
 }
 
 .indexLink{
-    display: flexbox;
+    display: block;
     width: 200px;
     /* margin: 0 5%; */
 }
