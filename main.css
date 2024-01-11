@@ -53,6 +53,7 @@ html, body{
     background-color: black;
     color: white;
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 main {
