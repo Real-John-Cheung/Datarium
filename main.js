@@ -13,6 +13,13 @@ const switchToEn = () => {
     for (let e of document.getElementsByClassName("ch")) {
         e.classList.add("hidden");
     }
+    if (localStorage) {
+        try {
+            localStorage.setItem("lang", "en");
+        } catch (error) {
+            console.warn("localStorage is not available on your browser");
+        }
+    }
 }
 
 const switchToCh = () => {
@@ -29,6 +36,13 @@ const switchToCh = () => {
     }
     for (let e of document.getElementsByClassName("ch")) {
         e.classList.remove("hidden");
+    }
+    if (localStorage) {
+        try {
+            localStorage.setItem("lang", "ch");
+        } catch (error) {
+            console.warn("localStorage is not available on your browser");
+        }
     }
 }
 
@@ -50,4 +64,30 @@ const bindEvents = () => {
         i.src = "";
         e.classList.add("hidden");
     });
+}
+
+const initLang = function(){
+    if (localStorage) {
+        try {
+            if (localStorage.getItem("lang")) {
+                switch (localStorage.getItem("lang")) {
+                    case "en":
+                        switchToEn();
+                        break;
+                    case "ch":
+                        switchToCh();
+                        break;
+                    default:
+                        switchToEn();
+                        break;
+                }
+            } else {
+                switchToEn();
+            }
+        } catch (error) {
+            switchToEn();
+        }
+    } else {
+        switchToEn();
+    }
 }

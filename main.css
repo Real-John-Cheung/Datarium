@@ -303,7 +303,7 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.56rem;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .pgText{
